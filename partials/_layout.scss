@@ -1,0 +1,98 @@
+
+.container {
+    max-width: 1330px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+.bg.home {
+    position: relative;
+}
+
+.justice  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-position: 50% 0;
+    opacity: 0.2;
+}
+
+.hero {
+    color: $white-normal;
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px;
+
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+    }
+
+    p{
+        text-align: center;
+        margin: 14px 0;
+    }
+}
+
+.button-contact {
+    border: 1px solid $white-normal;
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: $white-normal;
+    background-color: transparent;
+    transition: background-color 0.8s;
+    margin-top: 10px;
+}
+
+.button-contact:hover {
+    border: 1px solid $red-light;
+    background-color: $red-light;
+}
+
+@keyframes scaleButton {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        min-height: 68vh;
+
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .justice  {
+        position: absolute;
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .hero h1{
+        font-size: 24px;
+    }
+}
+
